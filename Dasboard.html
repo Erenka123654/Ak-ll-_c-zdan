@@ -1,0 +1,19 @@
+<thead>
+    <tr>
+    <th>Tip</th><th>Tutar</th><th>Kategori</th><th>Tarih</th><th>İşlem</th>
+    </tr>
+    </thead>
+    
+    <tbody>
+    {% for t in transactions %}
+    <tr>
+    <td>{{ t[2] }}</td>
+    <td>{{ t[3] }} TL</td>
+    <td>{{ t[4] }}</td>
+    <td>{{ t[5] }}</td>
+    <td>
+        <a href="/delete/{{ t[0] }}" class="btn btn-sm btn-danger">Sil</a>
+    </td>
+    </tr>
+    {% endfor %}
+    </tbody>
